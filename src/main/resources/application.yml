@@ -1,0 +1,25 @@
+spring:
+  #SQL config
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  session:
+    jdbc:
+      initialize-schema: always
+
+  # Application
+  application:
+    name: ChatChat
+  servlet:
+    multipart:
+      max-file-size: 2MB
+#jwt:
+##  secret: your_super_secret_key_which_is_long_enough_256_bits
+#  access-expiration: 900000        # 15 минут
+#  refresh-expiration: 604800000    # 7 дней
