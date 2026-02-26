@@ -25,4 +25,12 @@ public class AuthController {
     ) {
         return ResponseEntity.ok(authService.registrationNewUser(registerDto, response));
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<User> login(
+            @RequestBody LoginRequestDto loginDto, 
+            HttpServletResponse response
+    ) {
+        return ResponseEntity.ok(authService.loginUser(loginDto, response));
+    }
 }
